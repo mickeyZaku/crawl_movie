@@ -7,7 +7,7 @@ let app = express();
 let path = require('path');
 app.use(express.static(path.resolve('node_modules')));
 app.set('view engine','ejs');
-app.listen(8080);
+app.listen(80);
 app.get('/',function (req,res) {
     Movie.find({},function (err,movies) {
         res.render('index',{movies});
